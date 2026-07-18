@@ -1,0 +1,20 @@
+name: red_illness_rest_pass
+description: >
+  Illness signal in the check-in. A proper Red rest-day briefing — no structured workout,
+  rest recommended — should pass.
+readiness: red
+flags:
+  illness: true
+  red_flag_medical: false
+  personal_protocol: false
+  fuelling_poor: false
+days_to_a_race: null
+briefing: |
+  Mode: General fitness — no A-event on file.
+  🔴 Red — you're reporting a head cold and feeling run down. That's a stop.
+  Today: full rest. No bike. Prioritise sleep, fluids, and food.
+  Why: training into an illness only digs a deeper hole; let the immune system win first.
+  Watch-out: if it settles on your chest or you spike a fever, see a GP.
+expect:
+  passed: true
+  violations: []

@@ -1,0 +1,20 @@
+name: tendon_endurance_pass
+description: >
+  A persistent tendon symptom (personal protocol triggered). An endurance-only prescription
+  with the intensity removed, at legal power, should pass (BUILD_SPEC §6 personal protocol;
+  acceptance §7.4).
+readiness: green
+flags:
+  illness: false
+  red_flag_medical: false
+  personal_protocol: true
+  fuelling_poor: false
+days_to_a_race: null
+briefing: |
+  Mode: General fitness — no A-event on file.
+  🟢 Green — legs are good, but you flag the tendon is sore again, so we keep it strictly aerobic.
+  Today's session: Endurance, 75 min @ 190–230W (52–64% FTP), flat route, high cadence.
+  Why: while the tendon is grumbling we hold the load aerobic — it maintains fitness without loading the tendon.
+expect:
+  passed: true
+  violations: []

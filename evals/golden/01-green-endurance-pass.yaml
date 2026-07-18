@@ -1,0 +1,19 @@
+name: green_endurance_pass
+description: >
+  Normal Green day, no flags. A plain Z2 endurance prescription at legal power should
+  pass every check.
+readiness: green
+flags:
+  illness: false
+  red_flag_medical: false
+  personal_protocol: false
+  fuelling_poor: false
+days_to_a_race: null
+briefing: |
+  Mode: General fitness — no A-event on file.
+  🟢 Green — sleep solid, legs fresh, nothing flagged.
+  Today's session: Z2 endurance, 90 min @ 200–250W (55–69% FTP), conversational the whole way.
+  Why: base maintenance after a steady week; no reason to add stress.
+expect:
+  passed: true
+  violations: []

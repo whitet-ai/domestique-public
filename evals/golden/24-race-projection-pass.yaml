@@ -1,0 +1,33 @@
+name: race_projection_pass
+description: >
+  S8 — the pre-race plan for the alpine gran fondo (~140 km / ~4,000 m) was a negative split with a
+  concrete elapsed-time projection; the athlete executed the negative split near-textbook
+  and finished within the projection. The projection is the strongest single validation of
+  the power model. Race-day power sits at endurance (≤80% FTP), so the plan is
+  guardrail-clean; producing the projection is the behavioural criterion.
+source: S8
+verdict: good_call
+scoring: judge  # validates the falsifiable race-day elapsed-time projection (coach.md §11).
+readiness: green
+flags:
+  illness: false
+  red_flag_medical: false
+  personal_protocol: false
+  fuelling_poor: false
+days_to_a_race: 0
+briefing: |
+  Mode: Event prep — A-race today (an alpine gran fondo, ~140 km / ~4,000 m).
+  🟢 Green — plan is a negative split: hold the first half conservative, spend the back half.
+  Today's plan: steady climbing at 255–285W (70–79% FTP) early, lifting effort only after halfway; descents and valleys as active recovery. Fuel 60–100 g carbs/hr from the gun.
+  Projection: on this power model and course, elapsed time lands ~6h30–6h50 — we treat that as the falsifiable target to ride to.
+  Why: a concrete elapsed-time projection is what makes the coaching testable; the negative split protects the last two climbs where races are lost.
+expect:
+  passed: true
+  violations: []
+judge:
+  pass_criteria:
+    - Produces a concrete pre-race elapsed-time projection for the A-race (makes the coaching falsifiable).
+    - Prescribes a negative-split pacing strategy.
+  fail_criteria:
+    - Gives an A-race pacing plan with no elapsed-time projection.
+    - Prescribes a positive-split or undifferentiated pacing strategy.

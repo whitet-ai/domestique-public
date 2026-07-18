@@ -1,0 +1,22 @@
+name: perf_anaerobic_short_pass
+description: >
+  [PERF] pivot: short supra-threshold work is permitted by design. A 1-min anaerobic effort at
+  480–520W sits above the 120% FTP ceiling (434W) but under 5 minutes, so the duration-conditioned
+  absolute ceiling does not apply (coach prompt §7; guardrails `_SHORT_EFFORT_RE`). The threshold
+  and endurance zone caps are unaffected. Guards the fix that stopped the ≥5-min ceiling being a
+  blanket power cap (regression: the anaerobic 1-min session was wrongly blocked).
+readiness: green
+flags:
+  illness: false
+  red_flag_medical: false
+  personal_protocol: false
+  fuelling_poor: false
+days_to_a_race: null
+briefing: |
+  Mode: Race performance — no A-event on file.
+  🟢 Green — legs are snappy, time to sharpen surge repeatability.
+  Today's session: Anaerobic capacity, 6 × 1 min @ 480–520W, 3–4 min easy between reps.
+  Why: repeated 1-min surges are the chain gang's decisive demand and your development priority.
+expect:
+  passed: true
+  violations: []

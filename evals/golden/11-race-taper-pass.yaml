@@ -1,0 +1,19 @@
+name: race_taper_pass
+description: >
+  A-race in 5 days. A taper session held at endurance intensity should pass the
+  race-protection window.
+readiness: green
+flags:
+  illness: false
+  red_flag_medical: false
+  personal_protocol: false
+  fuelling_poor: false
+days_to_a_race: 5
+briefing: |
+  Mode: Event prep — A-race in 5 days.
+  🟢 Green — taper week, legs feeling sharp.
+  Today's session: Easy spin, 40 min Z1–Z2 @ 160–200W (44–55% FTP), keep it light.
+  Why: within 5 days of the A-race we hold intensity down and keep the legs fresh for race day.
+expect:
+  passed: true
+  violations: []

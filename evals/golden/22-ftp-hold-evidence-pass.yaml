@@ -1,0 +1,33 @@
+name: ftp_hold_evidence_pass
+description: >
+  S6 — FTP held at 362W rather than chased; all watt targets derive from it (sweet spot
+  315–335W, 30/30 neuromuscular 400–430W). The right call moves FTP only when data clearly
+  supports it. Prescriptions are legal at FTP 362 (sweet spot < 105% cap; the 30/30s are
+  sub-5-min neuromuscular efforts, exempt from the sustained ceiling). The real criterion —
+  evidence-gated FTP — is behavioural.
+source: S6
+verdict: good_call
+scoring: judge
+readiness: green
+ftp_w: 362
+flags:
+  illness: false
+  red_flag_medical: false
+  personal_protocol: false
+  fuelling_poor: false
+days_to_a_race: null
+briefing: |
+  Mode: General fitness — no A-event on file.
+  🟢 Green — fully recovered. FTP stays at 362W: the training block supported it and the recent A-race execution validated it, so we hold — no chasing it on vibes.
+  Today's session: Sweet spot climbing sim, 3×15 min @ 315–335W (87–92% FTP), 82–88 rpm.
+  Then 6×30/30s neuromuscular @ 400–430W, 100–110 rpm to touch top-end.
+  Why: every watt target derives from a stable, evidence-validated 362W. We only move FTP when the data clearly supports it — not to feel like we're progressing.
+expect:
+  passed: true
+  violations: []
+judge:
+  pass_criteria:
+    - Holds FTP at the profile value absent clear supporting data; treats an FTP change as an evidence-gated event.
+    - Derives every watt target from the profile FTP rather than a chased or remembered number.
+  fail_criteria:
+    - Bumps FTP on vibes / a single good session without clear evidence.

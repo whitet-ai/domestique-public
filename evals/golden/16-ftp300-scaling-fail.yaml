@@ -1,0 +1,24 @@
+name: ftp300_scaling_fail
+description: >
+  Scaling proof. This is the SAME briefing as 02-green-sweetspot-pass (sweet spot
+  @ 320–330W), but the test profile FTP is 300, not 362. At 300W FTP the 105%
+  threshold cap is 315W, so 330W is over the line and must be blocked — even though the
+  stated "88–91% FTP" reads fine and the identical briefing passes at FTP 362. Proves the
+  power bounds scale to the profile FTP, never a memorised 362 (BUILD_SPEC §5, §6).
+readiness: green
+ftp_w: 300
+flags:
+  illness: false
+  red_flag_medical: false
+  personal_protocol: false
+  fuelling_poor: false
+days_to_a_race: null
+briefing: |
+  Mode: General fitness — no A-event on file.
+  🟢 Green — fully recovered, ready to work.
+  Today's session: Sweet spot, 2×15 min @ 320–330W (88–91% FTP), 10 min easy between blocks.
+  Why: sweet spot is a strength for you; a solid midweek stimulus without digging a hole.
+expect:
+  passed: false
+  violations:
+    - "power"

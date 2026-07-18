@@ -1,0 +1,33 @@
+# Private working repo (BUILD_SPEC §3a): athlete/ and briefings/ ARE committed here
+# so the real profile persists across disposable build containers. They are scrubbed
+# from the separate public showcase copy, not by these ignore rules. Only secrets,
+# ride files, and token-like files are ever excluded.
+
+# --- Secrets & environment (secrets live ONLY as env vars, never in files) ---
+.env
+.env.*
+
+# --- Token-like / credential files (never committed) ---
+*.pem
+*.key
+*.p12
+*.pfx
+*.token
+.netrc
+secrets.yaml
+secrets.yml
+
+# --- Ride files reveal home location (§3a) ---
+*.gpx
+*.fit
+*.tcx
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+build/
+dist/
+.ruff_cache/
+.pytest_cache/

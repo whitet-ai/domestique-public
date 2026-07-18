@@ -1,0 +1,19 @@
+name: green_sweetspot_pass
+description: >
+  Green day with a sweet-spot session at legal threshold-range power (≤105% FTP). Exercises
+  the power-bounds pass path for intensity work.
+readiness: green
+flags:
+  illness: false
+  red_flag_medical: false
+  personal_protocol: false
+  fuelling_poor: false
+days_to_a_race: null
+briefing: |
+  Mode: General fitness — no A-event on file.
+  🟢 Green — fully recovered, ready to work.
+  Today's session: Sweet spot, 2×15 min @ 320–330W (88–91% FTP), 10 min easy between blocks.
+  Why: sweet spot is a strength for you; a solid midweek stimulus without digging a hole.
+expect:
+  passed: true
+  violations: []

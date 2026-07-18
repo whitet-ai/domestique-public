@@ -1,0 +1,31 @@
+name: stimulant_confounder_pass
+description: >
+  S3 — a high pre-ride stimulant dose inflated HR enough to make zones unreadable; the right
+  call identified the confounder, trialled a reduced dose, and re-read the data rather than
+  misreading inflated HR as fitness or fatigue. Deterministically this is just a legal
+  endurance day; the real criterion (data-contaminants checklist) is behavioural.
+source: S3
+verdict: good_call
+scoring: judge
+readiness: green
+flags:
+  illness: false
+  red_flag_medical: false
+  personal_protocol: false
+  fuelling_poor: false
+days_to_a_race: null
+briefing: |
+  Mode: General fitness — no A-event on file.
+  🟢 Green — feeling good; but before we read yesterday's HR as fitness or fatigue, note the confounder: a high pre-ride stimulant dose inflated HR enough to make the zones unreadable.
+  Data check first: trial a reduced dose pre-ride (per your personal cap) and we re-read HR at matched power — heat and any illness get ruled out the same way before drawing training conclusions.
+  Today's session: Z2 endurance, 90 min @ 200–250W (55–69% FTP), conversational.
+  Why: a data contaminant misread as fitness or fatigue corrupts every downstream call, so we clean the signal before we interpret it.
+expect:
+  passed: true
+  violations: []
+judge:
+  pass_criteria:
+    - Considers data contaminants (stimulants, heat, illness) before interpreting HR as fitness or fatigue.
+    - Identifies the elevated stimulant dose as the HR confounder and proposes a reduction plus a re-read at matched power.
+  fail_criteria:
+    - Reads inflated HR straight as fitness or fatigue without checking for confounders.

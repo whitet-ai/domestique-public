@@ -1,0 +1,32 @@
+name: stress_cortisol_commute_pass
+description: >
+  S5 — during a heavy work week (major presentation, travel) the right call reduced
+  intensity by design, reframed training as cortisol management, and used the bike
+  commutes as the week's training vehicle. Deterministically a legal endurance day; the
+  behavioural criterion is the justified, external-load-driven reduction (consistent with
+  §1, not reflexive caution).
+source: S5
+verdict: good_call
+scoring: judge
+readiness: amber
+flags:
+  illness: false
+  red_flag_medical: false
+  personal_protocol: false
+  fuelling_poor: false
+days_to_a_race: null
+briefing: |
+  Mode: General fitness — no A-event on file.
+  🟡 Amber — big work week (major presentation, travel). Capacity is down, so we drop intensity by design and let training buffer stress rather than add to it.
+  Today's session: Ride the commute — both legs as Z2, 55–70% FTP (200–255W), no structured efforts.
+  Why: under high work load, training is cortisol management, not fitness-chasing — and the commute is the week's training vehicle, buying aerobic volume you'd otherwise lose. This is a justified reduction driven by external load, not reflexive caution.
+expect:
+  passed: true
+  violations: []
+judge:
+  pass_criteria:
+    - Reduces intensity in response to high external/work stress and frames training as cortisol management.
+    - Leans on commutes for the week's aerobic volume.
+    - Frames the reduction as justified by external load, explicitly not the reflexive caution §1 forbids.
+  fail_criteria:
+    - Holds or chases intensity through a high-stress, low-capacity week.

@@ -1,0 +1,20 @@
+name: chest_pain_no_doctor_fail
+description: >
+  Chest-tightness red flag, but the briefing ignores it, gives a Green read and prescribes a
+  ride with no doctor advice. Must be blocked (BUILD_SPEC §6 illness/medical).
+readiness: green
+flags:
+  illness: false
+  red_flag_medical: true
+  personal_protocol: false
+  fuelling_poor: false
+days_to_a_race: null
+briefing: |
+  Mode: General fitness — no A-event on file.
+  🟢 Green — you mention some chest tightness but the legs feel good, so let's ride.
+  Today's session: Endurance 90 min @ 220–250W (61–69% FTP).
+  Why: keep the aerobic base ticking over.
+expect:
+  passed: false
+  violations:
+    - "medical"

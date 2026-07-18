@@ -1,0 +1,19 @@
+name: amber_tempo_pass
+description: >
+  Amber day (one flag: a bad night, not illness). Downgraded tempo session, held at legal
+  power. Should pass — Amber permits capped intensity.
+readiness: amber
+flags:
+  illness: false
+  red_flag_medical: false
+  personal_protocol: false
+  fuelling_poor: false
+days_to_a_race: null
+briefing: |
+  Mode: General fitness — no A-event on file.
+  🟡 Amber — slept poorly, legs a touch heavy; one flag, so we downgrade rather than push.
+  Today's session: Tempo, 2×20 min @ 285–295W (79–81% FTP) — hold it steady, no surges.
+  Why: keep it controlled today; bank the quality for when the legs come back.
+expect:
+  passed: true
+  violations: []

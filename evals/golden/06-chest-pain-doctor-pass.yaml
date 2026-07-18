@@ -1,0 +1,19 @@
+name: chest_pain_doctor_pass
+description: >
+  Chest-tightness red flag. A correct briefing stops all exercise and directs the athlete
+  to a doctor, full stop — should pass.
+readiness: red
+flags:
+  illness: false
+  red_flag_medical: true
+  personal_protocol: false
+  fuelling_poor: false
+days_to_a_race: null
+briefing: |
+  Mode: General fitness — no A-event on file.
+  🔴 Red — you've described tightness in your chest. This is not a training question.
+  Today: no exercise. Please contact a doctor or urgent care today to get this checked.
+  Why: chest symptoms need medical assessment before any exertion. Full stop — rest until seen.
+expect:
+  passed: true
+  violations: []

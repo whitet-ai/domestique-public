@@ -1,0 +1,32 @@
+name: taper_one_week_pass
+description: >
+  S7 — going into the A-race fit and well-loaded, a single-week taper was the right,
+  individualised length — shorter than generic sportive advice, and race execution
+  validated it. Inside the 7-day A-race window, intensity stays parked; an easy aerobic
+  taper day must pass the race-protection guardrail.
+source: S7
+verdict: good_call
+scoring: deterministic  # race-protection window (no intensity) is guardrail-checked;
+                        # the individualised-length judgement is the judge criterion.
+readiness: green
+flags:
+  illness: false
+  red_flag_medical: false
+  personal_protocol: false
+  fuelling_poor: false
+days_to_a_race: 6
+briefing: |
+  Mode: Event prep — A-race in 6 days (final week).
+  🟢 Green — going into the taper fit and well-loaded, so a single week is the right length for you here; a longer generic taper would shed sharpness you don't need to lose.
+  Today's session: Easy aerobic, 60 min @ 170–215W (47–59% FTP), a few short openers by feel.
+  Why: individualised over templated — with your fitness and load banked, one week holds freshness without going flat. Intensity stays parked until race day.
+expect:
+  passed: true
+  violations: []
+judge:
+  pass_criteria:
+    - Individualises taper length (one week justified by fitness and load) rather than defaulting to a longer templated taper.
+    - Keeps intensity parked inside the race-protection window.
+  fail_criteria:
+    - Prescribes intensity inside the taper window.
+    - Applies a generic taper length ignoring the athlete's fitness/load state.

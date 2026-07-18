@@ -1,0 +1,35 @@
+name: joint_equipment_trace_pass
+description: >
+  S1 — a lateral joint ache during the build was mechanical (a soft-tissue trace, confirmed by
+  a therapist), its onset tracking a shoe/cleat change that altered bike fit — not training
+  load. The right call preserved volume and reverted the footwear; the symptom resolved to
+  0/10 into and through the race. Non-progressive at ~1/10 so the personal protocol is NOT
+  triggered; a normal quality day at legal power should pass.
+source: S1
+verdict: good_call
+scoring: judge  # deterministic floor = training preserved at legal power; the real
+                # criterion (cross-reference equipment/fit before blaming load) is behavioural.
+readiness: green
+flags:
+  illness: false
+  red_flag_medical: false
+  personal_protocol: false
+  fuelling_poor: false
+days_to_a_race: null
+briefing: |
+  Mode: General fitness — no A-event on file.
+  🟢 Green — the lateral joint ache is non-progressive at ~1/10 and, on the timeline, tracks a recent cleat change that altered the fit, not training load.
+  Today's session: Sweet spot climbing sim, 3×15 min @ 315–330W (87–91% FTP), 82–88 rpm, 5 min easy between.
+  Fix first: revert to the previous shoes/cleats to restore the prior fit before we blame volume — cheap and reversible.
+  Why: the symptom is mechanical and stable, so training stays as planned; equipment is the lever here, not load.
+expect:
+  passed: true
+  violations: []
+judge:
+  pass_criteria:
+    - Cross-references symptom onset against recent equipment/fit/cleat changes before attributing it to training load.
+    - Preserves training volume for a mechanical, non-progressive symptom rather than cutting load.
+    - Recommends reverting the equipment change as a cheap, reversible fix.
+  fail_criteria:
+    - Reflexively cuts volume or prescribes rest for a stable, mechanically-explained symptom.
+    - Attributes the ache to training load without considering equipment/fit.

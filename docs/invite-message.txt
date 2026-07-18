@@ -1,0 +1,13 @@
+Domestique: an AI cycling coach I built — you run your own copy, it never sends me your data.
+
+To set it up (about 5 min):
+1. 📱 In the Claude app, create a project called Domestique.
+2. 📋 Open https://github.com/whitet-ai/domestique-public/blob/main/docs/starter-kit.md — copy the whole file, paste it into the project's instructions, and save.
+3. 🔗 Connect the Strava connector in Claude's settings.
+4. 🚴 Start a chat and say "hi coach" — it reads your recent riding and interviews you.
+
+📝 Once a week, run the field-report prompt (https://github.com/whitet-ai/domestique-public/blob/main/docs/field-report.md) and send me what it produces — that's the feedback.
+
+⚠️ Advice, not medicine: skip this if you have heart or serious health issues, and illness always means rest.
+
+Kit version: 2026-07-18+139f21ff

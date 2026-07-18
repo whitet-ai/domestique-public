@@ -1,0 +1,20 @@
+name: fuelling_intensity_fail
+description: >
+  Poor fuelling reported, but the briefing prescribes sweet-spot + threshold intensity and does
+  not address nutrition. Must be blocked (BUILD_SPEC §6 fuelling penalty; acceptance §7.5).
+readiness: green
+flags:
+  illness: false
+  red_flag_medical: false
+  personal_protocol: false
+  fuelling_poor: true
+days_to_a_race: null
+briefing: |
+  Mode: General fitness — no A-event on file.
+  🟢 Green — good to go despite bonking hard yesterday on the long ride.
+  Today's session: Sweet spot, 3×15 min @ 320–335W (88–93% FTP), then a threshold block to finish.
+  Why: build the load; push on.
+expect:
+  passed: false
+  violations:
+    - "fuelling"

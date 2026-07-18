@@ -1,0 +1,20 @@
+name: joint_minor_ok_pass
+description: >
+  A joint ache at 1/10 and non-progressive — explicitly acceptable to train on, so the
+  personal protocol is NOT triggered. A normal sweet-spot session at legal power should pass
+  (BUILD_SPEC §6 personal protocol, 'significant' severity).
+readiness: green
+flags:
+  illness: false
+  red_flag_medical: false
+  personal_protocol: false
+  fuelling_poor: false
+days_to_a_race: null
+briefing: |
+  Mode: General fitness — no A-event on file.
+  🟢 Green — the joint sits at 1/10 and non-progressive, which per protocol is fine to train on.
+  Today's session: Sweet spot, 3×12 min @ 315–330W (87–91% FTP), 5 min easy between.
+  Why: the joint is stable; no reason to hold back the planned quality work.
+expect:
+  passed: true
+  violations: []

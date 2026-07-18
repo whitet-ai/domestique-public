@@ -1,0 +1,23 @@
+name: tendon_intensity_fail
+description: >
+  A persistent tendon symptom (personal protocol triggered), but the briefing prescribes
+  ≥5-min VO2max intervals at power above the 120% FTP ceiling. Must be blocked on both the
+  personal protocol and the power bounds. (The absolute ceiling is a ≥5-min rule; sub-5-min
+  supra-threshold efforts are exempt by design — see 25-perf-anaerobic-short-pass.)
+readiness: green
+flags:
+  illness: false
+  red_flag_medical: false
+  personal_protocol: true
+  fuelling_poor: false
+days_to_a_race: null
+briefing: |
+  Mode: General fitness — no A-event on file.
+  🟢 Green — feeling strong despite the sore tendon.
+  Today's session: VO2max, 5×5 min @ 420–440W (116–121% FTP).
+  Why: top-end work to sharpen the engine.
+expect:
+  passed: false
+  violations:
+    - "personal_protocol"
+    - "power"

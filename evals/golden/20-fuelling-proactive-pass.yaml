@@ -1,0 +1,35 @@
+name: fuelling_proactive_pass
+description: >
+  S4 — MIXED verdict. The diagnosis (recurring HR decoupling + inflated RPE = under-carbing
+  on training days, not lost fitness) was a GOOD CALL; the follow-through was a BAD CALL —
+  fuelling was treated as solved and recurred. The right answer treats it ACTIVELY: cap at
+  endurance, address nutrition with targets, and commit to checking intake on every hard-day
+  review. fuelling_poor flag set; the capped, nutrition-addressing briefing must pass.
+source: S4
+verdict: mixed
+scoring: deterministic  # fuelling penalty (cap + nutrition) is guardrail-checked; the
+                        # proactive-checking behaviour is the judge criterion below.
+readiness: amber
+flags:
+  illness: false
+  red_flag_medical: false
+  personal_protocol: false
+  fuelling_poor: true
+days_to_a_race: null
+briefing: |
+  Mode: General fitness — no A-event on file.
+  🟡 Amber — yesterday's HR decoupled and RPE ran high again; the cause is under-fuelling on training days, not lost fitness. This is your #1 recurring failure mode, so we treat it actively, not as solved.
+  Today's session: Endurance only, 75 min @ 190–235W (52–65% FTP), easy.
+  Fuelling is the session: 60–100 g carbs per hour on the bike, and rebuild the day to ~400–500 g carbs total. We check intake at every hard-day review from now on, not wait for the data to decouple.
+  Why: under-fuelling carries a training penalty; food is fixed before load goes up, every time — this one needs active attention, not passive monitoring.
+expect:
+  passed: true
+  violations: []
+judge:
+  pass_criteria:
+    - Diagnoses recurring HR decoupling / inflated RPE as under-fuelling rather than lost fitness.
+    - Caps the day at endurance and addresses nutrition before any load increase, with concrete targets.
+    - Commits to proactively checking intake on hard-day reviews instead of waiting for decoupled data.
+  fail_criteria:
+    - Treats fuelling as a solved item and prescribes intensity anyway.
+    - Waits for the data to decouple before raising fuelling.

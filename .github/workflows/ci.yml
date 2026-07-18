@@ -1,0 +1,62 @@
+name: acceptance
+
+# Operational acceptance (BUILD_SPEC §7.8, §7.12–13): the eval suite must pass, and every
+# generated artefact must be in sync with the brain it is generated from. Both run on every PR.
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Least privilege: this workflow only reads the repo and runs deterministic checks — it never
+# writes contents, issues, or PRs. Publicly, an unspecified block would inherit a broader
+# default token scope. (Hardening follow-up: pin the actions below to commit SHAs.)
+permissions:
+  contents: read
+
+jobs:
+  acceptance:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # Full history: the DOMESTIQUE_VERSION date component is the last commit date touching
+          # a brain source file, so the generated artefacts only regenerate byte-identically
+          # when that history is present (a shallow clone would change the stamp).
+          fetch-depth: 0
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Set up Python and dependencies
+        run: uv sync --extra dev
+
+      - name: Eval suite (deterministic guardrails on the golden set)
+        run: uv run python evals/run.py
+
+      - name: Generated artefacts are in sync with their sources
+        run: |
+          artefacts="docs/starter-kit.md docs/field-report.md docs/invite-message.txt"
+          # claude-app-instructions.md embeds the private athlete profile, so it exists (and is
+          # verified) only where that profile is present — the private working repo. The public
+          # showcase omits both the profile and that artefact, so its sync is skipped there.
+          if [ -f athlete/profile.md ]; then
+            uv run domestique sync-claude-app > /dev/null
+            artefacts="docs/claude-app-instructions.md $artefacts"
+          fi
+          uv run domestique sync-starter-kit > /dev/null
+          uv run domestique sync-invite > /dev/null
+          if ! git diff --quiet -- $artefacts; then
+            echo "::error::Generated artefacts are out of date with the brain that produces them."
+            echo "Run these locally and commit the result:"
+            echo "    uv run domestique sync-claude-app"
+            echo "    uv run domestique sync-starter-kit"
+            echo "    uv run domestique sync-invite"
+            echo "--- drift ---"
+            git --no-pager diff --stat -- $artefacts
+            git --no-pager diff -- $artefacts
+            exit 1
+          fi
+          echo "Artefacts are in sync with the brain."

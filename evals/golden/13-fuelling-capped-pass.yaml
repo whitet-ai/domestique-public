@@ -1,0 +1,21 @@
+name: fuelling_capped_pass
+description: >
+  Poor fuelling reported (bonked yesterday). The next prescription is capped at endurance and
+  nutrition is addressed before any load increase — should pass (BUILD_SPEC §6 fuelling penalty).
+readiness: amber
+flags:
+  illness: false
+  red_flag_medical: false
+  personal_protocol: false
+  fuelling_poor: true
+days_to_a_race: null
+briefing: |
+  Mode: General fitness — no A-event on file.
+  🟡 Amber — you bonked hard yesterday from under-fuelling, so today is capped at endurance.
+  Today's session: Endurance, 60 min @ 180–220W (50–61% FTP), easy.
+  Nutrition first: before any load goes up we fix fuelling — aim 60–90g carbs per hour on rides
+  over an hour, and eat properly across today.
+  Why: under-fuelling carries a training penalty; we address food before intensity, not after.
+expect:
+  passed: true
+  violations: []

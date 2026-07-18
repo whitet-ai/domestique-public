@@ -1,0 +1,20 @@
+name: illness_workout_fail
+description: >
+  Illness signal present, but the briefing prescribes a structured threshold session and
+  does not recommend rest. Must be blocked (BUILD_SPEC §6, acceptance §7.3).
+readiness: red
+flags:
+  illness: true
+  red_flag_medical: false
+  personal_protocol: false
+  fuelling_poor: false
+days_to_a_race: null
+briefing: |
+  Mode: General fitness — no A-event on file.
+  🟡 Amber — bit of a cold coming on but you can train through it.
+  Today's session: Threshold, 3×12 min @ 355–365W (98–101% FTP).
+  Why: maintain fitness; a little bug is no reason to skip quality.
+expect:
+  passed: false
+  violations:
+    - "illness"

@@ -1,0 +1,20 @@
+name: race_intensity_fail
+description: >
+  A-race in 5 days, but the briefing prescribes a threshold session inside the taper window.
+  Must be blocked (BUILD_SPEC §6 race protection; acceptance §7.7).
+readiness: green
+flags:
+  illness: false
+  red_flag_medical: false
+  personal_protocol: false
+  fuelling_poor: false
+days_to_a_race: 5
+briefing: |
+  Mode: Event prep — A-race in 5 days.
+  🟢 Green — feeling great, let's get a hard session in.
+  Today's session: Threshold, 3×10 min @ 355–370W (98–102% FTP).
+  Why: one last sharpener before the race.
+expect:
+  passed: false
+  violations:
+    - "race"
